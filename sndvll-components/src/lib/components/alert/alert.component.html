@@ -1,4 +1,3 @@
-<!-- TODO MAKE ALL LABELS CONFIGURABLE FROM CONFIG OBJECT -->
 <div class="alert-header">
   <div class="text-lg">{{alertConfig?.message}}</div>
   <div>
@@ -8,19 +7,19 @@
 <ng-container [ngSwitch]="alertConfig.type">
   <ng-container *ngSwitchCase="'warning'">
     <div class="alert-content">
-      <sndvll-toggle [formControl]="toggleControl" [color]="Color.red">{{'ALERT.WARNING_MESSAGE' <!--| TODO translate -->}}</sndvll-toggle>
+      <sndvll-toggle [formControl]="toggleControl" [color]="Color.red">{{'ALERT.WARNING_MESSAGE' | translate }}</sndvll-toggle>
     </div>
     <div class="alert-footer">
       <button sndvll-btn="button" class="button btn secondary"
-              (click)="close(false)">{{'ALERT.BUTTON.CLOSE' | <!--| TODO translate -->}}</button>
+              (click)="close(false)">{{'ALERT.BUTTON.CLOSE' | translate }}</button>
       <button sndvll-btn="button" class="button btn danger"
               [disabled]="disabledButton"
-              (click)="close(true)">{{'ALERT.BUTTON.OK' | <!--| TODO translate -->}}</button>
+              (click)="close(true)">{{'ALERT.BUTTON.OK' | translate }}</button>
     </div>
   </ng-container>
   <ng-container *ngSwitchDefault>
     <div class="alert-footer">
-      <button sndvll-btn="button" class="button btn secondary" (click)="close()">{{'ALERT.BUTTON.OK' | <!--| TODO translate -->}}</button>
+      <button sndvll-btn="button" class="button btn secondary" (click)="close()">{{'ALERT.BUTTON.OK' | translate }}</button>
     </div>
   </ng-container>
 </ng-container>
