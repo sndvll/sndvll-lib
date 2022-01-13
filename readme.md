@@ -3,7 +3,7 @@
 In the current state, support is limited to Angular 13.
 Instructions for how to use with an angular project:
 
-1. Clone the repo into the root of the project, and rename the folder to "projects".
+1. Clone the repo into the root of the project.
 2. In tsconfig.json paste these paths in:
 ```
 "paths": {
@@ -13,87 +13,120 @@ Instructions for how to use with an angular project:
   "@sndvll/components/*": ["dist/sndvll-components/*"],
   "@sndvll/core": ["dist/sndvll-core"],
   "@sndvll/core/*": ["dist/sndvll-core/*"],
+  "@sndvll/food-icons": ["dist/sndvll-food-icons"],
+  "@sndvll/food-icons/*": ["dist/sndvll-food-icons/*"],
 }
 ```
 3. In angular.json paste these configs in under "projects" key:
 ```
-"sndvll-icons": {
-  "projectType": "library",
-  "root": "projects/sndvll-icons",
-  "sourceRoot": "projects/sndvll-icons/src",
-  "prefix": "lib",
-  "architect": {
-    "build": {
-      "builder": "@angular-devkit/build-angular:ng-packagr",
-      "options": {
-        "project": "projects/sndvll-icons/ng-package.json"
-      },
-      "configurations": {
-        "production": {
-          "tsConfig": "projects/sndvll-icons/tsconfig.lib.prod.json"
-        },
-        "development": {
-          "tsConfig": "projects/sndvll-icons/tsconfig.lib.json"
+    "sndvll-icons": {
+      "projectType": "library",
+      "root": "sndvll-lib/sndvll-icons",
+      "sourceRoot": "sndvll-lib/sndvll-icons/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "sndvll-lib/sndvll-icons/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "sndvll-lib/sndvll-icons/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "sndvll-lib/sndvll-icons/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
         }
-      },
-      "defaultConfiguration": "production"
-    }
-  }
-},
-"sndvll-components": {
-  "projectType": "library",
-  "root": "projects/sndvll-components",
-  "sourceRoot": "projects/sndvll-components/src",
-  "prefix": "lib",
-  "architect": {
-    "build": {
-      "builder": "@angular-devkit/build-angular:ng-packagr",
-      "options": {
-        "project": "projects/sndvll-components/ng-package.json"
-      },
-      "configurations": {
-        "production": {
-          "tsConfig": "projects/sndvll-components/tsconfig.lib.prod.json"
-        },
-        "development": {
-          "tsConfig": "projects/sndvll-components/tsconfig.lib.json"
-        }
-      },
-      "defaultConfiguration": "production"
-    }
-  }
-},
-"sndvll-core": {
-  "projectType": "library",
-  "root": "projects/sndvll-core",
-  "sourceRoot": "projects/sndvll-core/src",
-  "prefix": "lib",
-  "architect": {
-    "build": {
-      "builder": "@angular-devkit/build-angular:ng-packagr",
-      "options": {
-        "project": "projects/sndvll-core/ng-package.json"
-      },
-      "configurations": {
-        "production": {
-          "tsConfig": "projects/sndvll-core/tsconfig.lib.prod.json"
-        },
-        "development": {
-          "tsConfig": "projects/sndvll-core/tsconfig.lib.json"
-        }
-      },
-      "defaultConfiguration": "production"
+      }
     },
-    "test": {
-      "builder": "@angular-devkit/build-angular:karma",
-      "options": {
-        "main": "projects/sndvll-core/src/test.ts",
-        "tsConfig": "projects/sndvll-core/tsconfig.spec.json",
-        "karmaConfig": "projects/sndvll-core/karma.conf.js"
+    "sndvll-components": {
+      "projectType": "library",
+      "root": "sndvll-lib/sndvll-components",
+      "sourceRoot": "sndvll-lib/sndvll-components/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "sndvll-lib/sndvll-components/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "sndvll-lib/sndvll-components/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "sndvll-lib/sndvll-components/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    },
+    "sndvll-core": {
+      "projectType": "library",
+      "root": "sndvll-lib/sndvll-core",
+      "sourceRoot": "sndvll-lib/sndvll-core/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "sndvll-lib/sndvll-core/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "sndvll-lib/sndvll-core/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "sndvll-lib/sndvll-core/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "sndvll-lib/sndvll-core/src/test.ts",
+            "tsConfig": "sndvll-lib/sndvll-core/tsconfig.spec.json",
+            "karmaConfig": "sndvll-lib/sndvll-core/karma.conf.js"
+          }
+        }
+      }
+    },
+    "sndvll-food-icons": {
+      "projectType": "library",
+      "root": "sndvll-lib/sndvll-food-icons",
+      "sourceRoot": "sndvll-lib/sndvll-food-icons/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "sndvll-lib/sndvll-food-icons/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "sndvll-lib/sndvll-food-icons/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "sndvll-lib/sndvll-food-icons/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "sndvll-lib/sndvll-food-icons/src/test.ts",
+            "tsConfig": "sndvll-lib/sndvll-food-icons/tsconfig.spec.json",
+            "karmaConfig": "sndvll-lib/sndvll-food-icons/karma.conf.js"
+          }
+        }
       }
     }
-  }
-}
 ```
 4. In root package.json, add these scripts:
 ```
@@ -104,5 +137,13 @@ Instructions for how to use with an angular project:
 ```
 5. Then run ```npm run lib:build```
 
+6. To use the food-icons add:
+```
+"food-icons:build": "ng build sndvll-food-icons",
+```
+and run:```npm run food-icons:build```and maybe also add that to the lib:build script.
+
 Import components in modules where you want them, or create a ShareModule and import what you need there.<br />
 Create an IconsModule to use icons. Take a look in components library for an example.
+
+Also don't forget to  add ```/sndvll-lib``` to .gitignore file
