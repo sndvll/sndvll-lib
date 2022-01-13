@@ -20,7 +20,7 @@ export class CardContentDirective {
 export class CardFooterDirective {}
 
 @Component({
-  selector: 'card',
+  selector: 'sndvll-card',
   template: '<ng-content></ng-content>'
 })
 export class CardComponent {

@@ -1,5 +1,5 @@
 import {ModuleWithProviders, NgModule, Optional} from '@angular/core';
-import { IconComponent } from './icon.component';
+import {IconComponent} from './icon.component';
 import {Icons} from './icons';
 
 @NgModule({
@@ -17,7 +17,7 @@ export class SndvllIconsModule {
     }
   }
 
-  static pick(icons: {[keys: string]: string}): ModuleWithProviders<SndvllIconsModule> {
+  static pick(icons: { [keys: string]: string }): ModuleWithProviders<SndvllIconsModule> {
     return {
       ngModule: SndvllIconsModule,
       providers: [

@@ -38,16 +38,6 @@
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 
-
-
-
-
-
-
-
-
-
-
 // CardComponent classes
 .card {
   @apply block box-border rounded w-full shadow bg-white dark:bg-black;
@@ -299,6 +289,17 @@ input.toggle-checkbox {
     @apply h-8 w-8 rounded focus:outline-none bg-transparent flex justify-center items-center;
     &.hover {
       @apply hover:bg-gray-100 dark:hover:bg-gray-700;
+    }
+    &.wide {
+      @apply w-14;
+    }
+    &.start {
+      //justify-content: start !important;
+      @apply justify-start pl-1;
+    }
+    &.end {
+      //justify-content: end !important;
+      @apply justify-end pr-1;
     }
   }
 
