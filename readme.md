@@ -146,4 +146,4 @@ and run:```npm run food-icons:build```and maybe also add that to the lib:build s
 Import components in modules where you want them, or create a ShareModule and import what you need there.<br />
 Create an IconsModule to use icons. Take a look in components library for an example.
 
-Also don't forget to  add ```/sndvll-lib``` to .gitignore file
+Also don't forget to  add ```/sndvll-lib``` to .gitignore file, and ``` './sndvll-lib/sndvll-core/purgecss-safelist.txt'``` to tailwind.config.js content-array.
