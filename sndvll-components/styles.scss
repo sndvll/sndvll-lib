@@ -176,7 +176,7 @@
   @apply bg-white dark:bg-black flex flex-col shadow rounded overflow-y-auto overflow-x-hidden mt-1 max-h-60;
 }
 .select-option {
-  @apply block cursor-pointer items-center p-2 border-transparent bg-white dark:bg-gray-900 text-black dark:text-white border-l-2 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-200 dark:hover:border-gray-400 capitalize;
+  @apply block cursor-pointer items-center p-2 border-transparent bg-white dark:bg-gray-700 text-black dark:text-white border-l-2 hover:bg-gray-50 dark:hover:bg-gray-600 hover:border-gray-200 dark:hover:border-gray-400 capitalize;
 }
 .select-clear-button {
   @apply h-6 w-6 rounded focus:outline-none bg-transparent text-gray-700 dark:text-gray-100 outline-none;

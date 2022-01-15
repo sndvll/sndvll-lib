@@ -5,7 +5,7 @@ export * from './accordion';
 export * from './alert';
 export * from './dropdown-menu';
 export * from './input';
-export * from './searchbar';
+export * from './search';
 export * from './select';
 export * from './toggle';
 export * from './tooltip';

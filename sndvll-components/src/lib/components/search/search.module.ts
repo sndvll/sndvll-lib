@@ -4,7 +4,8 @@ import {IconsModule} from '../../icons.module';
 import {SearchbarComponent} from './searchbar.component';
 import {ButtonModule} from '../../directives';
 import {ReactiveFormsModule} from '@angular/forms';
-import {SearchbarResultComponent, SearchbarResultItemComponent} from './searchbar-result.component';
+import {SearchComponent} from './search.component';
+import {SearchResultComponent, SearchResultItemComponent} from './search-result.component';
 
 @NgModule({
   imports: [
@@ -15,12 +16,14 @@ import {SearchbarResultComponent, SearchbarResultItemComponent} from './searchba
   ],
   declarations: [
     SearchbarComponent,
-    SearchbarResultComponent,
-    SearchbarResultItemComponent
+    SearchResultComponent,
+    SearchResultItemComponent,
+    SearchComponent
   ],
   exports: [
+    SearchComponent,
     SearchbarComponent,
-    SearchbarResultItemComponent
+    SearchResultItemComponent
   ]
 })
-export class SearchbarModule {}
+export class SearchModule {}

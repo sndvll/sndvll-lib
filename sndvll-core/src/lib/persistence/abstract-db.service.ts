@@ -33,7 +33,10 @@ export abstract class AbstractDbService<T> {
   }
 
   public bulkAdd(data: T[]) {
-    this.table.bulkAdd(data);
+    this.table.bulkAdd(data)
+      .catch(err => {
+        console.log(err);
+      });
   }
 
   public bulkPut(data: T[]) {

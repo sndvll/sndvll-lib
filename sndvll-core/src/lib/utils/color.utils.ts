@@ -12,7 +12,20 @@ export enum Color {
   pink = 'pink',
   black = 'black',
   white = 'white',
-  transparent = 'transparent'
+  transparent = 'transparent',
+  slate = 'slate',
+  zinc = 'zinc',
+  stone = 'stone',
+  orange = 'orange',
+  amber = 'amber',
+  lime = 'lime',
+  emerald = 'emerald',
+  teal = 'teal',
+  cyan = 'cyan',
+  sky = 'sky',
+  violet = 'violet',
+  fuchsia = 'fuchsia',
+  rose = 'rose'
 }
 
 export const Colors: Color[] = Object.values(Color);
