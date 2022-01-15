@@ -10,23 +10,7 @@ import {
 } from '@angular/core';
 import {FoodIcons} from './food-icons';
 import {uppercamelcase} from './utils';
-
-export type IconSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '1rem' | '1.25rem' | '1.5rem' | '1.75rem' | '2rem';
-export type IconWeight = 'normal' | 'bold' | 'bolder';
-
-const pixelSizes = {
-  xs: '14px',
-  sm: '18px',
-  md: '20px',
-  lg: '22px',
-  xl: '24px',
-}
-
-const iconWeights = {
-  normal: '2px',
-  bold: '3px',
-  bolder: '4px'
-}
+import {IconSize, IconWeight, iconWeights, pixelSizes} from '@sndvll/core';
 
 @Component({
   selector: 'food-icon',

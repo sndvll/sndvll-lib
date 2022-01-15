@@ -344,6 +344,14 @@ input.toggle-checkbox {
   @apply pt-2;
 }
 
+sndvll-accordion-item {
+  &.disable-internal-padding {
+    >.accordion-body {
+      @apply pt-0;
+    }
+  }
+}
+
 // Alert component
 
 .alert {
