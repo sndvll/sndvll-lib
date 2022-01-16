@@ -340,6 +340,8 @@ input.toggle-checkbox {
 .accordion-header {
   @apply cursor-pointer;
 }
+
+// todo fix this to only be a local thing in pricetrckr
 .accordion-body {
   @apply pt-2;
 }
