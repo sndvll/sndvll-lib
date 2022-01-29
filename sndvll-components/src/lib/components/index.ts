@@ -11,3 +11,4 @@ export * from './toggle';
 export * from './tooltip';
 export * from './drag-drop';
 export * from './loader';
+export * from './pill';

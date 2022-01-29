@@ -56,7 +56,7 @@
 
 // DropdownMenuComponent classes
 .dropdown-menu {
-  @apply flex flex-col shadow rounded overflow-y-auto mt-1;
+  @apply flex flex-col shadow rounded overflow-y-auto my-1;
   > div {
     @apply border-gray-100;
   }
