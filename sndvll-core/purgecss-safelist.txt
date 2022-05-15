@@ -74,3 +74,7 @@ hover:bg-amber-600
 bg-amber-500
 hover:bg-rose-600
 bg-rose-500
+bg-gray-700
+hover:bg-gray-700
+bg-gray-300
+hover:bg-gray-300

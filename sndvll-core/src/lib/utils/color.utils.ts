@@ -45,7 +45,7 @@ export class ColorUtils {
   }
 
   public static black(hover: boolean = false): string {
-    let classes = 'bg-black';
+    let classes = 'bg-black text-white';
     if (hover) {
       classes = `${classes} hover:bg-gray-700`;
     }
@@ -53,9 +53,9 @@ export class ColorUtils {
   }
 
   public static white(hover: boolean= false): string {
-    let classes = 'bg-white';
+    let classes = 'bg-white text-black';
     if (hover) {
-      classes = `${classes} hover:bg-gray-100`;
+      classes = `${classes} hover:bg-gray-300`;
     }
     return classes;
   }

@@ -14,7 +14,17 @@ export class PillComponent {
   public currentSize = PillComponent.defaultSize;
 
   @Input() set color(color: Color) {
-    this.classes = `${this.classes} ${this.currentSize} ${ColorUtils.color(color, this.hue, false)} ${ColorUtils.color(color, this.hue, true)}`;
+    let colorClasses = ColorUtils.color(color, this.hue, true);
+
+    if (color === Color.black) {
+      colorClasses = ColorUtils.black(true);
+    }
+
+    if (color === Color.white) {
+      colorClasses = ColorUtils.white(true);
+    }
+
+    this.classes = `${this.classes} ${this.currentSize} ${colorClasses}`;
   }
   @Input() hue: ColorHue = '500';
 
