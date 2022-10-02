@@ -7,7 +7,7 @@ import {FormControl} from '@angular/forms';
 })
 export class SearchbarComponent {
 
-  public inputFormControl = new FormControl('');
+  public inputFormControl: FormControl<string> = new FormControl<string>('', {nonNullable: true});
 
   @Output() valueChanges = this.inputFormControl.valueChanges;
   @Output() focus = new EventEmitter<void>();
