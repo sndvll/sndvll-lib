@@ -22,7 +22,7 @@ export class AlertComponent<D = any> implements OnInit, OnDestroy {
   private _onDestroy = new Subject<void>();
   private _disabledButton = true;
 
-  public toggleControl: FormControl<boolean>;
+  public toggleControl: FormControl;
   public alertConfig!: AlertConfig;
 
   public Color = Color;
@@ -55,7 +55,7 @@ export class AlertComponent<D = any> implements OnInit, OnDestroy {
   constructor(@Inject(OVERLAY_REF) private overlayRef: OverlayRef<AlertComponent<D>, AlertConfig>,
               private changeDetectorRef: ChangeDetectorRef) {
     this.alertConfig = overlayRef.config.data!;
-    this.toggleControl = new FormControl<boolean>(false, {nonNullable: true});
+    this.toggleControl = new FormControl(false);
   }
 
   public ngOnInit() {
