@@ -8,11 +8,11 @@ export abstract class AbstractDbService<T> {
                         public keys = '') {}
 
   public findAll():  Observable<T[] | undefined> {
-    return from(this.table.toArray()).pipe(take(1));
+    return from(this.table.toArray());
   }
 
   public find(id: string): Observable<T | undefined> {
-    return from(this.table.get(id)).pipe(take(1));
+    return from(this.table.get(id));
   }
 
   public delete(id: string): void {

@@ -28,7 +28,7 @@ export class InputComponent implements ControlValueAccessor {
 
   private _disabled: boolean = false;
   private _showClearButton = false;
-  private _value = new BehaviorSubject< string | number>('');
+  private _value = new BehaviorSubject<string | number>('');
   public value$ = this._value.asObservable();
 
   @ViewChild('input') input!: ElementRef;

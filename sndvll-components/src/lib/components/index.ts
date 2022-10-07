@@ -12,3 +12,4 @@ export * from './tooltip';
 export * from './drag-drop';
 export * from './loader';
 export * from './pill';
+export * from './textarea';

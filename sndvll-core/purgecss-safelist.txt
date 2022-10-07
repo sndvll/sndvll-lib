@@ -13,6 +13,7 @@ opacity-50
 opacity-60
 bg-black
 bg-white
+bg-amber-200
 
 bg-blue-300
 dark:bg-blue-400
