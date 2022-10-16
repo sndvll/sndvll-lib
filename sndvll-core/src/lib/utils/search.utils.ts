@@ -38,4 +38,12 @@ export class SearchUtils {
       points: SearchUtils.evaluateString(entry.name, phrase) + SearchUtils.evaluateStringArray(entry.tags, phrase)
     };
   }
+
+  public static search(values: Searchable[], phrase: string): Searchable[] {
+    return values
+      .map(entry => this.evaluateSearchable(entry, phrase.toLowerCase()))
+      .filter(entry => !!entry.points)
+      .sort((a, b) => b.points - a.points)
+      .map(({entry}) => entry);
+  }
 }

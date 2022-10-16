@@ -13,3 +13,4 @@ export * from './drag-drop';
 export * from './loader';
 export * from './pill';
 export * from './textarea';
+export * from './tabs';

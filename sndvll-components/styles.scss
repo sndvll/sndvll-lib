@@ -413,3 +413,20 @@ sndvll-accordion-item {
     @apply h-10 w-10;
   }
 }
+
+.textarea-component {
+  @apply bg-white dark:bg-black text-black dark:text-white p-1 flex border border-gray-200 rounded;
+  > textarea {
+    @apply appearance-none outline-none w-full text-gray-800 placeholder-gray-400 bg-white dark:bg-black text-black dark:text-white focus:outline-none focus:border-hidden focus:ring-0 w-full h-20 max-h-40;
+  }
+}
+
+.active {
+  @apply bg-gray-400;
+  &.left {
+    @apply rounded-l-lg;
+  }
+  &.right {
+    @apply rounded-r-lg;
+  }
+}
